@@ -1,6 +1,6 @@
 ### Basics
 - Game on the web
-- Using javascript / php
+- Using javascript / php / docker
 - goal is to learn
 
 ### Type of game
