@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   web:
     image: php:8.2-apache
@@ -14,12 +15,13 @@ services:
     image: mysql:8.0
     container_name: mysql-db
     restart: always
+    ports:
+      - "3306:3306"
     environment:
-      - DB_HOST=localhost
-      - DB_NAME=name
-      - DB_USER=root
-      - DB_PASSWORD=""
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: calamity_dev
     volumes:
       - db_data:/var/lib/mysql
+
 volumes:
   db_data:
