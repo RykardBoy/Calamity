@@ -1,0 +1,9 @@
+.terre {
+	transform: 
+        rotate(48deg)
+		rotateX(45deg)
+		rotateY(315deg)
+		rotateZ(20deg)
+		perspective(700px);
+	transform-origin: center center;
+}
