@@ -3,7 +3,7 @@ let move_player = (player) => {
     addEventListener('keyup', (key) => {
         console.log(key.key)
         switch (key.key){
-            case 'w': player.clientX + 1;
+            case 'w': key.target.clientX + 1;
 
         }
     })
