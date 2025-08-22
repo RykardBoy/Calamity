@@ -16,14 +16,28 @@ addEventListener('keyup', (key) => {
 
 
 let movePlayer = () => {
-    if (posY < 1000 && posY > -1000){
+    if (posY !== 800){
         if (keyPressed.has('w')) posY -= speed;
-        if (keyPressed.has('s')) posY += speed;
+    } else {
+        posY -= 1;
     }
 
-    if (posX < 1000 && posX > -1000){
+    if (posY !== 70){
+        if (keyPressed.has('s')) posY += speed;
+    } else {
+        posY += 1;
+    }
+
+    if (posX !== 1600){
         if (keyPressed.has('a')) posX -= speed;
+    } else {
+        posX -= 1;
+    }
+
+    if (posX !== 100){
         if (keyPressed.has('d')) posX += speed;
+    } else {
+        posX += 1;
     }
 
     player.style.top = posY + "px";
