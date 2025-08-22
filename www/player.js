@@ -1,5 +1,6 @@
 // move with keyboard
 let player = document.getElementById('player');
+let earth = document.getElementById('terreBloc')
 let posX = 500;
 let posY = 500;
 let speed = 1;
@@ -16,28 +17,28 @@ addEventListener('keyup', (key) => {
 
 
 let movePlayer = () => {
-    if (posY !== 800){
+    if (posY !== 90){
         if (keyPressed.has('w')) posY -= speed;
-    } else {
-        posY -= 1;
-    }
-
-    if (posY !== 70){
-        if (keyPressed.has('s')) posY += speed;
     } else {
         posY += 1;
     }
 
-    if (posX !== 1600){
-        if (keyPressed.has('a')) posX -= speed;
+    if (posY !== 925){
+        if (keyPressed.has('s')) posY += speed;
     } else {
-        posX -= 1;
+        posY -= 1;
     }
 
-    if (posX !== 100){
-        if (keyPressed.has('d')) posX += speed;
+    if (posX !== 300){
+        if (keyPressed.has('a')) posX -= speed;
     } else {
         posX += 1;
+    }
+
+    if (posX !== 1450){
+        if (keyPressed.has('d')) posX += speed;
+    } else {
+        posX -= 1;
     }
 
     player.style.top = posY + "px";
