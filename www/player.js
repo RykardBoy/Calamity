@@ -4,7 +4,7 @@ let earth = document.getElementById('terreBloc')
 
 let posX = 500;
 let posY = 500;
-let speed = 1;
+let speed = 10;
 
 let keyPressed = new Set();
 
